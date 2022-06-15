@@ -1,0 +1,347 @@
+{
+  "adsDetails": [
+    {
+      "id": 1,
+      "background": "red",
+      "info": "Check out our summer sales to find the hottest offers up to 70% off!",
+      "btn": "DOWNLOAD NOW"
+    },
+    {
+      "id": 2,
+      "background": "black",
+      "info": "Download the Modesens mobile app and get three months of silver membership",
+      "btn": "DOWNLOAD NOW"
+    },
+    {
+      "id": 3,
+      "background": "black",
+      "info": "Download the Modesens mobile app and get three months of silver membership",
+      "btn": "Install Now"
+    }
+  ],
+  "banner": [
+    {
+      "id": 1,
+      "imgURL": "https://modesens.com/banner/12453/getimg/?img=%2Fbanner%2F20220613-modesens-SummerFashionGuide-1140x400-EN.jpg",
+      "title": "",
+      "subTitle": "",
+      "btn": ""
+    },
+    {
+      "id": 2,
+      "imgURL": "https://cdn.modesens.com/banner/20220612-modesens-TheSportsEdit-1140x400-EN.jpg",
+      "title": "",
+      "subTitle": "",
+      "btn": ""
+    },
+    {
+      "id": 3,
+      "imgURL": "https://modesens.com/banner/12457/getimg/?img=%2Fbanner%2F20220614-modesens-Monnalisa-1140x400-EN.jpg",
+      "title": "",
+      "subTitle": "",
+      "btn": ""
+    },
+    {
+      "id": 4,
+      "imgURL": "https://cdn.modesens.com/banner/20220613-modesens-AERYNE-1140x400-EN.jpg",
+      "title": "",
+      "subTitle": "",
+      "btn": ""
+    },
+    {
+      "id": 5,
+      "imgURL": "https://modesens.com/banner/12467/getimg/?img=%2Fbanner%2F20220614-modesens-lengjingblog-1140x400.jpg",
+      "title": "5 Must-Have Summer Dresses",
+      "subTitle": "Mini, Midi, Maxi & More",
+      "btn": "Read Now"
+    },
+    {
+      "id": 6,
+      "imgURL": "https://modesens.com/banner/11843/getimg/?img=%2Fbanner%2F20220516-modesens-SS22-SALE-1140x400-EN.jpg",
+      "title": "",
+      "subTitle": "",
+      "btn": ""
+    },
+    {
+      "id": 7,
+      "imgURL": "https://modesens.com/banner/12462/getimg/?img=%2Fbanner%2F20220614-modesens-saledresses-1140x400-F.jpg",
+      "title": "Get Ready to Swoon",
+      "subTitle": "Fall in love with these sale dresses",
+      "btn": "Shop Now"
+    },
+    {
+      "id": 8,
+      "imgURL": "https://modesens.com/banner/12450/getimg/?img=%2Fbanner%2F20220613-modesens-FSaintLaurent-1140x400-F.jpg",
+      "title": "See You in Paris",
+      "subTitle": "Shop new arrivals from Saint Laurent",
+      "btn": "Shop Now"
+    },
+    {
+      "id": 9,
+      "imgURL": "https://modesens.com/banner/12387/getimg/?img=%2Fbanner%2F20220607-modesens-Beachvibes-1140x400-F.jpg",
+      "title": "Be Scintillating This Summer",
+      "subTitle": "Discover the beach vibe style edit",
+      "btn": "Shop Now"
+    }
+  ],
+  "featured_partners": [
+    {
+      "id": 1,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-GUCCI-logo.png"
+    },
+    {
+      "id": 2,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-PRADA-logo.png"
+    },
+    {
+      "id": 3,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-SAINT-LAURENT-logo.png"
+    },
+    {
+      "id": 4,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-BOTTEGA-VENETA-logo.png"
+    },
+    {
+      "id": 5,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-BURBERRY-logo.png"
+    },
+    {
+      "id": 6,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-FENDI-logo.png"
+    },
+    {
+      "id": 7,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-VERSACE-logo.png"
+    },
+    {
+      "id": 8,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-BALENCIAGA-logo.png"
+    },
+    {
+      "id": 9,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-GIVENCHY-logo.png"
+    },
+    {
+      "id": 10,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-LOEWE-logo.png"
+    },
+    {
+      "id": 11,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-OFF-WHITE-logo.png"
+    },
+    {
+      "id": 12,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-VALENTINO-logo.png"
+    },
+    {
+      "id": 13,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-NET-A-PORTER-logo.png"
+    },
+    {
+      "id": 14,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-MR-PORTER-logo.png"
+    },
+    {
+      "id": 15,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-FARFETCH-logo.png"
+    },
+    {
+      "id": 16,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-MATCHESFASHION-logo.png"
+    },
+    {
+      "id": 17,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-LUISAVIAROMA-logo.png"
+    },
+    {
+      "id": 18,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-SHOPBOP-logo.png"
+    },
+    {
+      "id": 19,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-SHOPBOP-logo.png"
+    },
+    {
+      "id": 20,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-SHOPBOP-logo.png"
+    },
+    {
+      "id": 21,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-SSENSE-logo.png"
+    },
+    {
+      "id": 22,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-NORDSTROM-logo.png"
+    },
+    {
+      "id": 23,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-HARVEY-NICHOLS-logo.png"
+    },
+    {
+      "id": 24,
+      "imgURL": "https://cdn.modesens.com/banner/20211014-SAKS-FIFTH-AVENUE-logo.png"
+    }
+  ],
+  "special_offers": [
+    {
+      "id": 1,
+      "imgURL": "https://pbs.twimg.com/media/FUL9idWWYAIy4Kf?format=jpg&name=4096x4096",
+      "title": "GUCCI",
+      "sub": "Father's Day Gift"
+    },
+    {
+      "id": 2,
+      "imgURL": "https://miro.medium.com/max/1400/1*CbegGjZTgfeDtQJwcwEUpw.jpeg",
+      "title": "Sale is Here",
+      "sub": "Enjoy upto 50% off!"
+    },
+    {
+      "id": 3,
+      "imgURL": "https://www.pinkvilla.com/imageresize/amber_heard_2_5.jpg?width=752&format=webp&t=pvorg",
+      "title": "New To Sale",
+      "sub": "Fresh Cut"
+    },
+    {
+      "id": 4,
+      "imgURL": "https://englishtribuneimages.blob.core.windows.net/gallary-content/2021/11/2021_11$largeimg_1674731505.jpg",
+      "title": "Our Kind of Dream Teams",
+      "sub": "Collaboration is SO in Fashion"
+    },
+    {
+      "id": 5,
+      "imgURL": "https://i.pinimg.com/originals/7f/84/80/7f8480db5c54f3dc917e54cd0d2436f1.jpg",
+      "title": "Modesens Fashion Guide",
+      "sub": "2022 Summer Trends"
+    },
+    {
+      "id": 6,
+      "imgURL": "https://filmfare.wwmindia.com/content/2022/mar/manushichhillarisecstaticaboutprithvirajreleasingaweekearlier21646996135.jpg",
+      "title": "Relieve that Slumber Party Fun",
+      "sub": "Discover a Pillow Bag For Everyday Wear"
+    }
+  ],
+  "trending_now": [
+    {
+      "id": 1,
+      "imgURL": "https://cdn.modesens.com/product/7298931_66?w=400&",
+      "title": "BURBERRY",
+      "sub": "Bbry Carrick Top Tee Cn Ss Chckd Logo Si",
+      "min": 351,
+      "max": 570,
+      "stores": 24
+    },
+    {
+      "id": 2,
+      "imgURL": "https://cdn-images.farfetch-contents.com/17/78/37/20/17783720_39317799_1000.jpg",
+      "title": "ALEXANDER MCQUEEN",
+      "sub": "Crossover-strap Slim-fit Stretch neat mini",
+      "min": 331,
+      "max": 560,
+      "stores": 21    
+    },
+    {
+      "id": 3,
+      "imgURL": "https://cdn.modesens.com/product/41449769_2?w=400&",
+      "title": "JACQUEMUS",
+      "sub": "La Robe Limao Cutout Halter Neck",
+      "min": 341,
+      "max": 1060,
+      "stores": 24        
+    },
+    {
+      "id": 4,
+      "imgURL": "https://res.cloudinary.com/ssenseweb/image/upload/b_white%2Cc_lpad%2Cg_center%2Ch_960%2Cw_960/c_scale%2Ch_680/f_auto%2Cdpr_1.0/212144F109000_1.jpg",
+      "title": "GANNI",
+      "sub": "Cotton Popplin Collared Sleeveless Top In",
+      "min": 71,
+      "max": 100,
+      "stores": 20       
+    },
+    {
+      "id": 5,
+      "imgURL": "https://cdn.modesens.com/availability/45254795?w=400&",
+      "title": "DOLCE & GABBANA",
+      "sub": "Jersey T-shirt with dolce gabbana print",
+      "min": 244,
+      "max": 600,
+      "stores": 20       
+    },
+    {
+      "id": 6,
+      "imgURL": "https://cdn.modesens.com/product/40615641_2?w=400&",
+      "title": "SAINT LAURENT",
+      "sub": "Universite Oversize Cotton Logo Graphic",
+      "min": 380,
+      "max": 890,
+      "stores": 18      
+    },
+    {
+      "id": 7,
+      "imgURL": "https://cdn.modesens.com/availability/48383362?w=400&",
+      "title": "ALEXANDER MCQUEEN",
+      "sub": "Alexander Mcqueen women's black",
+      "min": 553,
+      "max": 1554,
+      "stores": 18      
+    },
+    {
+      "id": 8,
+      "imgURL": "https://cdn.modesens.com/availability/48287774?w=400&",
+      "title": "GANNI",
+      "sub": "Women's black other Materials Sandals",
+      "min": 190,
+      "max": 471,
+      "stores": 18
+    }
+  ],
+  "community_post":[
+    {
+      "id":1,
+      "imgURL": "https://cdn.modesens.com/umedia/1587542s?w=400&"
+    },
+    {
+      "id":2,
+      "imgURL": "https://cdn.modesens.com/umedia/1593167s?w=400&"
+    },
+    {
+      "id":3,
+      "imgURL": "https://cdn.modesens.com/umedia/1592136s?w=400&"
+    },
+    {
+      "id":4,
+      "imgURL": "https://cdn.modesens.com/umedia/1587648s?w=400&"
+    },
+    {
+      "id":5,
+      "imgURL": "https://cdn.modesens.com/umedia/14180s?w=400&"
+    },
+    {
+      "id":6,
+      "imgURL": "https://cdn.modesens.com/umedia/1583751s?w=400&"
+    },
+    {
+      "id":7,
+      "imgURL": "https://cdn.modesens.com/umedia/1580264s?w=400&"
+    },
+    {
+      "id":8,
+      "imgURL": "https://cdn.modesens.com/umedia/1572505s?w=400&"
+    },
+    {
+      "id":9,
+      "imgURL": "https://cdn.modesens.com/umedia/1567811s?w=400&"
+    },
+    {
+      "id":10,
+      "imgURL": "https://cdn.modesens.com/umedia/1567328s?w=400&"
+    },
+    {
+      "id":11,
+      "imgURL": "https://cdn.modesens.com/umedia/1564720s?w=400&"
+    },
+    {
+      "id":12,
+      "imgURL": "https://cdn.modesens.com/umedia/1561699s?w=400&"
+    }
+  ]
+}
