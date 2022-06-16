@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { BsFillHandbagFill, BsFillHeartFill } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
@@ -6,7 +6,7 @@ import { AiOutlineSave } from "react-icons/ai";
 import { MdDataSaverOff } from "react-icons/md";
 
 const MainDiv = styled.div`
-  width: 1015px;
+  width: 900px;
   height: 664px;
   margin: auto;
   margin-top: 60px;
@@ -54,9 +54,74 @@ const UpperDiv = styled.div`
 
 const RightDiv = styled.div`
   width: 49%;
+  display: flex;
+  align-items: center;
+  text-align: center;
 `;
+const InnerDiv = styled.div`
+  width: 308px;
+  text-align: center;
+  margin: auto;
+`;
+const Title = styled.h2`
+  font-weight: 400;
+  font-size: 18px;
+  color: #1e1f21;
+  margin: 0;
+`;
+const P1 = styled.p`
+  font-size: 14px;
+`;
+const Div1 = styled.div`
+  margin-top: 8px;
+  input {
+    width: 96%;
+    font-size: 14px;
+    height: 34px;
+    outline: none;
+    border: 1px solid #1c1c1c;
+  }
+`;
+const Div2 = styled.div`
+  display: ${(props) => (props.isLoggedIn ? "none" : "flex")};
+  align-items: center;
+  margin-top: 10px;
+
+  label {
+    font-size: 12px;
+    color: #1c1c1c;
+    font-weight: 500;
+  }
+`;
+const ForgotP = styled.p`
+  margin: 0;
+  display: ${(props) => props.isLoggedIn === false && "none"};
+`;
+const Button = styled.button`
+  width: 302px;
+  height: 37px;
+  margin-top: 25px;
+  background: #1c1c1c;
+  color: #fff;
+  font-weight: 550;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+`;
+const P2 = styled.p``;
+const SocialIcons = styled.div`
+  img {
+    margin-right: 10px;
+  }
+`;
+const P3 = styled.p`
+  text-decoration: underline;
+  cursor: pointer;
+`;
+const P4 = styled.p``;
 
 const Login = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <MainDiv>
       <LeftDiv>
@@ -93,7 +158,57 @@ const Login = () => {
           </p>
         </UpperDiv>
       </LeftDiv>
-      <RightDiv></RightDiv>
+      <RightDiv>
+        <InnerDiv>
+          <Title>
+            {isLoggedIn ? "Log in to your account" : "Create an account"}
+          </Title>
+          <P1>
+            Compare across 500+ stores <br />
+            to find the best price.
+          </P1>
+          <Div1>
+            <input type="email" placeholder="Email" />
+          </Div1>
+          <Div1>
+            <input type="password" placeholder="Password" />
+          </Div1>
+          <Div2 isLoggedIn={isLoggedIn}>
+            <input type="checkbox" />
+            <label>Subscribe to personalized sale updates and offers</label>
+          </Div2>
+          <ForgotP isLoggedIn={isLoggedIn}>Forgot Password?</ForgotP>
+          <Button>{isLoggedIn ? "LOG IN" : "Sign Up"}</Button>
+          <P2>or</P2>
+          <SocialIcons>
+            <img
+              src="https://modesens.com/static/img/login-icon/20210617google.svg"
+              alt=""
+            />
+            <img
+              src="https://modesens.com/static/img/login-icon/20210617facebook.svg"
+              alt=""
+            />
+            <img
+              src="https://modesens.com/static/img/login-icon/20210617apple.svg"
+              alt=""
+            />
+            <img
+              src="https://modesens.com/static/img/login-icon/20210617wechat.svg"
+              alt=""
+            />
+          </SocialIcons>
+          <P3 onClick={() => setIsLoggedIn(!isLoggedIn)}>
+            {isLoggedIn
+              ? "Don't have an account? Please sign up."
+              : "Already have an account? Please Sign in."}
+          </P3>
+          <P4>
+            By creating an account, I agree to <br />
+            the Terms of Use and the Privacy Policy
+          </P4>
+        </InnerDiv>
+      </RightDiv>
     </MainDiv>
   );
 };
