@@ -13,6 +13,7 @@ import Designers from './Pages/Designers';
 import Community from './Pages/Community';
 import Why_ModSens from './Pages/Why_ModSens';
 import Checkout from './Pages/Checkout';
+import Login from './Pages/Login';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='community' element={<Community/>}/>
         <Route path='why-modsens' element={<Why_ModSens/>}/>
         <Route path='checkout' element={<Checkout/>}/>
+        <Route path='login' element={<Login/>}/>
       </Routes>
       
       <Footer/>

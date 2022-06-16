@@ -43,7 +43,7 @@ const RightDiv = styled.div`
 const GridDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 220px);
-  grid-template-rows: repeat(6, 400px);
+  grid-template-rows: repeat(auto, 400px);
   margin: auto;
   width: 100%;
   margin-top: 50px;
@@ -92,7 +92,6 @@ const GridDiv = styled.div`
 
 const Shop_Women = () => {
   const { shopW } = useContext(AppContext);
-  console.log(shopW);
 
   return (
     <MainDiv>

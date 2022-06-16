@@ -279,7 +279,7 @@ const Navbar = () => {
       </TopDiv>
       <BottomDiv>
         <img
-          onClick={()=>navigate('')}
+          onClick={() => navigate("")}
           src="https://cdn.modesens.com/static/img/20190228newlogo-black.svg"
         />
 
@@ -386,10 +386,13 @@ const Navbar = () => {
             src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
             alt=""
           />
-          <BsHandbagFill href="/checkout" style={{ fontSize: "20px", marginRight: "15px" }} />
-          <MdManageAccounts style={{ fontSize: "25px", marginRight: "15px" }} />
+          <BsHandbagFill style={{ fontSize: "20px", marginRight: "15px" }} />
+          <MdManageAccounts
+            onClick={() => navigate("/login")}
+            style={{ fontSize: "25px", marginRight: "15px", cursor: 'pointer' }}
+          />
           <Div2>
-            <BsSearch style={{fontWeight: '550', fontSize: '15px'}}/>
+            <BsSearch style={{ fontWeight: "550", fontSize: "15px" }} />
             <input type="text" placeholder="SEARCH" />
           </Div2>
         </Div1>
@@ -487,7 +490,7 @@ const Navbar = () => {
               textDecoration: "none",
               fontSize: "13px",
               fontWeight: "550",
-              color: 'red'
+              color: "red",
             }}
             to="/shop-women-sale"
           >
@@ -614,7 +617,7 @@ const Navbar = () => {
               textDecoration: "none",
               fontSize: "13px",
               fontWeight: "550",
-              color: 'red'
+              color: "red",
             }}
             to="/shop-men-sale"
           >
@@ -723,7 +726,7 @@ const Navbar = () => {
               fontSize: "13px",
               fontWeight: "550",
             }}
-            to="/shop-KIDS"
+            to="/shop-kids"
           >
             SHOP ALL
           </Link>

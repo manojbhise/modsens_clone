@@ -58,6 +58,36 @@ export const AppProvider = ({ children }) => {
       .catch((e) => console.log(e));
   }, []);
 
+  // Shop men
+  const [shopM, setShopM] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/shop_men`)
+      .then((res) => setShopM(res.data))
+      .catch((e) => console.log(e));
+  }, []);
+
+  // Shop beauty
+  const [shopB, setShopB] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/shop_beauty`)
+      .then((res) => setShopB(res.data))
+      .catch((e) => console.log(e));
+  }, []);
+
+  // Shop kids
+  const [shopK, setShopK] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/shop_kids`)
+      .then((res) => setShopK(res.data))
+      .catch((e) => console.log(e));
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -73,7 +103,10 @@ export const AppProvider = ({ children }) => {
         pageNum3,
         setPageNum3,
         communityP,
-        shopW
+        shopW,
+        shopM,
+        shopB,
+        shopK
       }}
     >
       {children}
