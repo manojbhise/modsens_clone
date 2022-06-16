@@ -117,7 +117,9 @@ const P3 = styled.p`
   text-decoration: underline;
   cursor: pointer;
 `;
-const P4 = styled.p``;
+const P4 = styled.p`
+  display: ${(props) => props.isLoggedIn === true && "none"};
+`;
 
 const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -203,7 +205,7 @@ const Login = () => {
               ? "Don't have an account? Please sign up."
               : "Already have an account? Please Sign in."}
           </P3>
-          <P4>
+          <P4 isLoggedIn={isLoggedIn}>
             By creating an account, I agree to <br />
             the Terms of Use and the Privacy Policy
           </P4>
