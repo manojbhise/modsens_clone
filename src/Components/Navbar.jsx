@@ -11,7 +11,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const Div = styled.div`
-  width: 100vw;
+  width: 100%;
 `;
 const TopDiv = styled.div`
   height: 37px;
@@ -45,7 +45,7 @@ const TopDiv = styled.div`
   }
 `;
 const BottomDiv = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -96,7 +96,7 @@ const Div3 = styled.div`
   display: ${(props) => props.hover1};
   z-index: 100;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   border-top: 1.3px solid #c0b9b9;
   border-bottom: 1.3px solid #c0b9b9;
@@ -115,7 +115,7 @@ const Div4 = styled.div`
   display: ${(props) => props.hover2};
   z-index: 100;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   border-top: 1.3px solid #c0b9b9;
   border-bottom: 1.3px solid #c0b9b9;
@@ -134,7 +134,7 @@ const Div5 = styled.div`
   display: ${(props) => props.hover3};
   z-index: 100;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   border-top: 1.3px solid #c0b9b9;
   border-bottom: 1.3px solid #c0b9b9;
@@ -153,7 +153,7 @@ const Div6 = styled.div`
   display: ${(props) => props.hover4};
   z-index: 100;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   border-top: 1.3px solid #c0b9b9;
   border-bottom: 1.3px solid #c0b9b9;
@@ -172,7 +172,7 @@ const Div7 = styled.div`
   display: ${(props) => props.hover6};
   z-index: 100;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   border-top: 1.3px solid #c0b9b9;
   border-bottom: 1.3px solid #c0b9b9;
@@ -191,7 +191,7 @@ const Div8 = styled.div`
   display: ${(props) => props.hover8};
   z-index: 100;
   height: 50px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   border-top: 1.3px solid #c0b9b9;
   border-bottom: 1.3px solid #c0b9b9;
@@ -269,7 +269,7 @@ const Navbar = () => {
           style={{
             height: "18px",
             width: "18px",
-            marginLeft: "9%",
+            marginLeft: "8%",
             cursor: "pointer",
           }}
           onClick={() => {

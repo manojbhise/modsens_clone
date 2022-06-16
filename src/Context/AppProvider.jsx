@@ -48,6 +48,16 @@ export const AppProvider = ({ children }) => {
       .catch((e) => console.log(e));
   }, [pageNum3]);
 
+  // Shop women
+  const [shopW, setShopW] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/shop_women`)
+      .then((res) => setShopW(res.data))
+      .catch((e) => console.log(e));
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -63,6 +73,7 @@ export const AppProvider = ({ children }) => {
         pageNum3,
         setPageNum3,
         communityP,
+        shopW
       }}
     >
       {children}

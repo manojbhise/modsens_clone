@@ -5,7 +5,7 @@ import axios from "axios";
 import { AppContext } from "../Context/AppProvider";
 
 const MainDiv = styled.div`
-  width: 100vw;
+  width: 100%;
   margin-top: 5px;
 `;
 const BannerDiv = styled.div`
@@ -56,7 +56,7 @@ const ImgDiv = styled.div`
 `;
 // Featured Partners
 const FeaturedPartners = styled.div`
-  width: 100vw;
+  width: 100%;
   margin-top: 40px;
 `;
 const TitleDiv = styled.div`
@@ -171,8 +171,8 @@ const SpecialMiddle = styled.div`
 `;
 // Trending Now
 const TrendingNow = styled.div`
-margin: 0;
-`
+  margin: 0;
+`;
 const TrendingDiv = styled.div`
   width: 1180px;
   height: 500px;
@@ -210,11 +210,11 @@ const TrendingMiddle = styled.div`
     font-size: 12px;
     color: #8e8e8e;
   }
-  h4{
+  h4 {
     margin: 0;
     margin-top: 10px;
     font-size: 12px;
-    color: #1c1c1c;    
+    color: #1c1c1c;
   }
   button {
     margin: 0;
@@ -249,8 +249,8 @@ const CommunityMiddle = styled.div`
     height: 380px;
     cursor: pointer;
   }
-  `;
-  const CommunityDiv = styled.div`
+`;
+const CommunityDiv = styled.div`
   width: 1180px;
   height: 380px;
   display: flex;
@@ -259,7 +259,74 @@ const CommunityMiddle = styled.div`
   margin: auto;
   margin-top: 20px;
   justify-content: center;
-  `
+`;
+const DownloadApp = styled.div`
+  background: #f8f7f6;
+  width: 100%;
+  height: 770px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+`;
+const InsideDiv = styled.div`
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+`;
+const InnerDiv = styled.div`
+  height: 670px;
+  width: 42%;
+  text-align: center;
+
+  h2 {
+    height: 80px;
+    font-size: 24px;
+    color: #1c1c1c;
+    margin-top: 0;
+    margin-bottom: 7px;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+  }
+  p {
+    height: 42px;
+    font-size: 14px;
+    color: #1c1c1c;
+    margin-top: 0;
+    margin-bottom: 14px;
+    letter-spacing: 0.4px;
+    font-weight: 500;
+  }
+  button {
+    margin: 0;
+    width: 150px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 550;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+`;
+const Img1 = styled.img`
+  margin-top: 25px;
+  width: 200px;
+  height: 400px;
+`;
+const Img2 = styled.img`
+  margin-top: 25px;
+  width: 409px;
+  height: 400px;
+`;
+const P = styled.p`
+font-size: 14px;
+color: #1c1c1c;
+margin-top: 42px;
+text-align: center;
+font-weight: 550;
+`
 
 const Home = () => {
   // Banner
@@ -272,7 +339,7 @@ const Home = () => {
   // Trending Now
   const { pageNum2, setPageNum2, trendingNow } = useContext(AppContext);
   // Community posts
-  const { pageNum3, setPageNum3, communityP, } = useContext(AppContext);
+  const { pageNum3, setPageNum3, communityP } = useContext(AppContext);
 
   useEffect(() => {
     axios
@@ -335,7 +402,7 @@ const Home = () => {
           </LogoLeft>
           <LogoMiddle>
             {featPartners.map((item) => (
-              <div>
+              <div key={item.id}>
                 <img src={item.imgURL} />
               </div>
             ))}
@@ -372,7 +439,7 @@ const Home = () => {
           </LogoLeft>
           <SpecialMiddle>
             {specialOffers.map((item) => (
-              <div>
+              <div key={item.id}>
                 <img src={item.imgURL} alt="" />
                 <h2>{item.title}</h2>
                 <h3>{item.sub}</h3>
@@ -412,11 +479,13 @@ const Home = () => {
           </LogoLeft>
           <TrendingMiddle>
             {trendingNow.map((item) => (
-              <div>
+              <div key={item.id}>
                 <img src={item.imgURL} alt="" />
                 <h2>{item.title}</h2>
                 <h3>{item.sub}</h3>
-                <h4>${item.min} - ${item.max}</h4>
+                <h4>
+                  ${item.min} - ${item.max}
+                </h4>
                 <h3>{item.stores} Stores</h3>
                 <button>Quick View</button>
               </div>
@@ -454,7 +523,7 @@ const Home = () => {
           </LogoLeft>
           <CommunityMiddle>
             {communityP.map((item) => (
-              <div>
+              <div key={item.id}>
                 <img src={item.imgURL} alt="" />
               </div>
             ))}
@@ -470,6 +539,39 @@ const Home = () => {
           </LogoRight>
         </CommunityDiv>
       </TrendingNow>
+      {/* Download & Install App*/}
+      <DownloadApp>
+        <InsideDiv>
+          <InnerDiv>
+            <h2>
+              Download the <br /> ModeSense App
+            </h2>
+            <p>
+              A seamless experience that takes your style <br />
+              to the next level.
+            </p>
+            <div>
+              <button>DOWNLOAD NOW</button>
+            </div>
+            <Img1 src="https://cdn.modesens.com/static/img/20220420AppDownloaden.png" />
+          </InnerDiv>
+          <InnerDiv>
+            <h2>
+              Install the ModeSens
+              <br /> Browser Extension
+            </h2>
+            <p>
+              Get timely, accurate product information
+              <br />
+              every time you browse.
+            </p>
+            <button>INSTALL NOW</button>
+            <br />
+            <Img2 src="https://cdn.modesens.com/static/img/20211109downloadright.png" />
+          </InnerDiv>
+        </InsideDiv>
+      </DownloadApp>
+      <P>When you follow our links to visit a brand or retailer’s website or make a purchase, ModeSens may earn a commission.</P>
     </MainDiv>
   );
 };
