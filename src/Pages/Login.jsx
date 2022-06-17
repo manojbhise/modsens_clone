@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { BsFillHandbagFill, BsFillHeartFill } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
 import { AiOutlineSave } from "react-icons/ai";
 import { MdDataSaverOff } from "react-icons/md";
+import { AppContext } from "../Context/AppProvider";
+import axios from "axios";
 
 const MainDiv = styled.div`
   width: 900px;
@@ -124,6 +126,35 @@ const P4 = styled.p`
 const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  // const { loginData, setLoginData, loginForm, setLoginForm } = useContext(AppContext);
+  const [loginData, setLoginData] = useState("");
+  const [loginForm, setLoginForm] = useState({});
+  const [data, setData] = useState([]);
+  const [change, setChange] = useState(false);
+  const onChange = (e) => {
+    const { name } = e.target;
+    setLoginForm({
+      ...loginForm,
+      [name]: e.target.value,
+    });
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:8080/loginData", {
+      email: loginForm.email,
+      password: loginForm.password,
+    });
+    setLoginForm({});
+    setChange(!change);
+  };
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/loginData")
+      .then((res) => setData(res.data))
+      .catch((e) => console.log(e));
+    console.log(data, "data");
+  }, [change]);
+
   return (
     <MainDiv>
       <LeftDiv>
@@ -170,17 +201,33 @@ const Login = () => {
             to find the best price.
           </P1>
           <Div1>
-            <input type="email" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              value={loginForm.name}
+              onChange={onChange}
+              placeholder="Email"
+              required
+            />
           </Div1>
           <Div1>
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              value={loginForm.name}
+              onChange={onChange}
+              placeholder="Password"
+              required
+            />
           </Div1>
           <Div2 isLoggedIn={isLoggedIn}>
             <input type="checkbox" />
             <label>Subscribe to personalized sale updates and offers</label>
           </Div2>
           <ForgotP isLoggedIn={isLoggedIn}>Forgot Password?</ForgotP>
-          <Button>{isLoggedIn ? "LOG IN" : "Sign Up"}</Button>
+          <Button onClick={onSubmit}>
+            {isLoggedIn ? "LOG IN" : "Sign Up"}
+          </Button>
           <P2>or</P2>
           <SocialIcons>
             <img

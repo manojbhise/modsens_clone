@@ -1143,5 +1143,30 @@
       "max": 471,
       "stores": 18
     }
+  ],
+  "loginData": [
+    {
+      "email": "manoj@email.com",
+      "password": "12345@",
+      "id": 1
+    },
+    {
+      "email": "csca",
+      "password": "sna",
+      "id": 2
+    },
+    {
+      "email": "snnmnadn",
+      "password": "jwanjkdnjkw",
+      "id": 3
+    },
+    {
+      "email": "dwmd",
+      "password": "dawdma",
+      "id": 4
+    },
+    {
+      "id": 5
+    }
   ]
 }
