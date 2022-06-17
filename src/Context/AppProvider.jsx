@@ -88,6 +88,11 @@ export const AppProvider = ({ children }) => {
       .catch((e) => console.log(e));
   }, []);
 
+  // Login
+  const [loginData, setLoginData] = useState('');
+  const [loginForm, setLoginForm] = useState({});
+ 
+
   return (
     <AppContext.Provider
       value={{
@@ -106,7 +111,11 @@ export const AppProvider = ({ children }) => {
         shopW,
         shopM,
         shopB,
-        shopK
+        shopK,
+        loginData, 
+        setLoginData,
+        loginForm,
+        setLoginForm
       }}
     >
       {children}

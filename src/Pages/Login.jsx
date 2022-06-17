@@ -81,6 +81,7 @@ const Div1 = styled.div`
     font-size: 14px;
     height: 34px;
     outline: none;
+    padding-left: 10px;
     border: 1px solid #1c1c1c;
   }
 `;
@@ -127,10 +128,10 @@ const Login = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // const { loginData, setLoginData, loginForm, setLoginForm } = useContext(AppContext);
-  const [loginData, setLoginData] = useState("");
   const [loginForm, setLoginForm] = useState({});
+  const [newLogin, setNewLogin] = useState({});
   const [data, setData] = useState([]);
-  const [change, setChange] = useState(false);
+
   const onChange = (e) => {
     const { name } = e.target;
     setLoginForm({
@@ -138,22 +139,29 @@ const Login = () => {
       [name]: e.target.value,
     });
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8080/loginData", {
-      email: loginForm.email,
-      password: loginForm.password,
-    });
-    setLoginForm({});
-    setChange(!change);
+    if (isLoggedIn) {
+      axios
+        .get("http://localhost:8080/loginData")
+        .then((res) => setData(res.data))
+        .catch((e) => console.log(e));
+      console.log("data", data);
+    } else {
+      if (loginForm.email !== "" && loginForm.password !== "") {
+        axios.post("http://localhost:8080/loginData", {
+          email: loginForm.email,
+          password: loginForm.password,
+        });
+        alert("Sign Up Successful");
+        setLoginForm({});
+      }
+      else{
+        alert('Fill all fields');
+      }
+    }
   };
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/loginData")
-      .then((res) => setData(res.data))
-      .catch((e) => console.log(e));
-    console.log(data, "data");
-  }, [change]);
 
   return (
     <MainDiv>
@@ -207,7 +215,6 @@ const Login = () => {
               value={loginForm.name}
               onChange={onChange}
               placeholder="Email"
-              required
             />
           </Div1>
           <Div1>
@@ -217,7 +224,6 @@ const Login = () => {
               value={loginForm.name}
               onChange={onChange}
               placeholder="Password"
-              required
             />
           </Div1>
           <Div2 isLoggedIn={isLoggedIn}>
@@ -247,7 +253,12 @@ const Login = () => {
               alt=""
             />
           </SocialIcons>
-          <P3 onClick={() => setIsLoggedIn(!isLoggedIn)}>
+          <P3
+            onClick={() => {
+              setIsLoggedIn(!isLoggedIn);
+              setLoginForm({});
+            }}
+          >
             {isLoggedIn
               ? "Don't have an account? Please sign up."
               : "Already have an account? Please Sign in."}
