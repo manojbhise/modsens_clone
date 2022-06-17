@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { BsFillHandbagFill, BsFillHeartFill } from "react-icons/bs";
 import { IoMdNotifications } from "react-icons/io";
@@ -129,36 +130,64 @@ const Login = () => {
 
   // const { loginData, setLoginData, loginForm, setLoginForm } = useContext(AppContext);
   const [loginForm, setLoginForm] = useState({});
-  const [newLogin, setNewLogin] = useState({});
+  const [existingUser, setExistingUser] = useState({});
   const [data, setData] = useState([]);
+  const [success, setSuccess] = useState(false);
 
   const onChange = (e) => {
-    const { name } = e.target;
-    setLoginForm({
-      ...loginForm,
-      [name]: e.target.value,
-    });
+    if (isLoggedIn) {
+      const { name } = e.target;
+      setExistingUser({
+        ...existingUser,
+        [name]: e.target.value,
+      });
+      console.log(existingUser);
+    } else {
+      const { name } = e.target;
+      setLoginForm({
+        ...loginForm,
+        [name]: e.target.value,
+      });
+    }
   };
 
+  const getData = () => {
+    axios
+      .get("http://localhost:8080/loginData")
+      .then((res) => setData(res.data))
+      .catch((e) => console.log(e));
+    console.log("data", data);
+  };
   const onSubmit = (e) => {
     e.preventDefault();
     if (isLoggedIn) {
-      axios
-        .get("http://localhost:8080/loginData")
-        .then((res) => setData(res.data))
-        .catch((e) => console.log(e));
-      console.log("data", data);
+      getData();
+
+      if (existingUser.email.length > 4 && existingUser.password.length > 4) {
+        setSuccess(false);
+        data.map((item) => {
+          if (
+            existingUser.email === item.email &&
+            existingUser.password === item.password
+          ) {
+            alert("Login Successful!");
+            setSuccess(true);
+          }
+        });
+        if (success === false) alert("Invalid Credentials!");
+      } else {
+        alert("At Least 5 characters required!");
+      }
     } else {
-      if (loginForm.email !== "" && loginForm.password !== "") {
+      if (loginForm.email.length > 4 && loginForm.password.length > 4) {
         axios.post("http://localhost:8080/loginData", {
           email: loginForm.email,
           password: loginForm.password,
         });
         alert("Sign Up Successful");
         setLoginForm({});
-      }
-      else{
-        alert('Fill all fields');
+      } else {
+        alert("At Least 5 characters required");
       }
     }
   };
@@ -178,23 +207,23 @@ const Login = () => {
             alt=""
           />
           <p>
-            <BsFillHandbagFill />
+            <BsFillHandbagFill style={{marginRight: "5px"}}/>
             Compare across 500+ stores
           </p>
           <p>
-            <IoMdNotifications />
+            <IoMdNotifications style={{marginRight: "5px"}} />
             Get alert on your items
           </p>
           <p>
-            <AiOutlineSave />
+            <AiOutlineSave style={{marginRight: "5px"}} />
             Save your searches
           </p>
           <p>
-            <BsFillHeartFill />
+            <BsFillHeartFill style={{marginRight: "5px"}} />
             Manage your shopping lists
           </p>
           <p>
-            <MdDataSaverOff style={{ color: "#fff" }} />
+            <MdDataSaverOff style={{marginRight: "5px"}} />
             Earn points
           </p>
         </UpperDiv>
@@ -212,7 +241,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              value={loginForm.name}
+              value={isLoggedIn ? existingUser.name : loginForm.name}
               onChange={onChange}
               placeholder="Email"
             />
@@ -221,7 +250,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
-              value={loginForm.name}
+              value={isLoggedIn ? existingUser.name : loginForm.name}
               onChange={onChange}
               placeholder="Password"
             />
