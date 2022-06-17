@@ -16,11 +16,13 @@ const BannerDiv = styled.div`
   box-sizing: border-box;
 `;
 const DivLeft = styled.div``;
-const DivMiddle = styled.div``;
+const DivMiddle = styled.div`
+position: relative;
+`;
 const DivRight = styled.div``;
 const OnImgDiv = styled.div`
   display: ${(props) => (props.title === "" ? "none" : "grid")};
-  position: fixed;
+  position: absolute;
   z-index: 5;
   margin-left: 60px;
   margin-top: 100px;

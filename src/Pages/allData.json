@@ -1179,6 +1179,11 @@
       "email": "manoj@gmail.com",
       "password": "123456",
       "id": 7
+    },
+    {
+      "email": "manojexample@mail.com",
+      "password": "manoj123",
+      "id": 8
     }
   ]
 }
