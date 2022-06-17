@@ -1174,6 +1174,11 @@
       "email": "govind@yahoo.com",
       "password": "govind#12",
       "id": 6
+    },
+    {
+      "email": "manoj@gmail.com",
+      "password": "123456",
+      "id": 7
     }
   ]
 }
