@@ -399,11 +399,20 @@ const Navbar = () => {
       </BottomDiv>
 
       {/* Hover elements ----------------------->Women*/}
+      <div onMouseLeave={() => {
+          setHover1("none");
+          setHover2("none");
+          setHover3("none");
+          setHover4("none");
+          setHover6("none");
+          setHover7("none");
+          setHover8("none");
+        }}>
       <Div3
         hover1={hover1}
-        onMouseLeave={() => {
-          setHover1("none");
-        }}
+        // onMouseLeave={() => {
+        //   setHover1("none");
+        // }}
       >
         <div>
           <Link
@@ -528,9 +537,9 @@ const Navbar = () => {
       {/* Hover elements ----------------------->Men*/}
       <Div4
         hover2={hover2}
-        onMouseLeave={() => {
-          setHover2("none");
-        }}
+        // onMouseLeave={() => {
+        //   setHover2("none");
+        // }}
       >
         <div>
           <Link
@@ -654,9 +663,9 @@ const Navbar = () => {
       {/* Hover elements ----------------------->Beauty */}
       <Div5
         hover3={hover3}
-        onMouseLeave={() => {
-          setHover3("none");
-        }}
+        // onMouseLeave={() => {
+        //   setHover3("none");
+        // }}
       >
         <div>
           <Link
@@ -714,9 +723,9 @@ const Navbar = () => {
       {/* Hover elements ----------------------->Kids */}
       <Div6
         hover4={hover4}
-        onMouseLeave={() => {
-          setHover4("none");
-        }}
+        // onMouseLeave={() => {
+        //   setHover4("none");
+        // }}
       >
         <div>
           <Link
@@ -800,9 +809,9 @@ const Navbar = () => {
       {/* Hover elements ----------------------->Offers */}
       <Div7
         hover6={hover6}
-        onMouseLeave={() => {
-          setHover6("none");
-        }}
+        // onMouseLeave={() => {
+        //   setHover6("none");
+        // }}
       >
         <div>
           <Link
@@ -847,9 +856,9 @@ const Navbar = () => {
       {/* Hover elements======================================>>Community */}
       <Div8
         hover8={hover8}
-        onMouseLeave={() => {
-          setHover8("none");
-        }}
+        // onMouseLeave={() => {
+        //   setHover8("none");
+        // }}
       >
         <div>
           <Link
@@ -904,6 +913,7 @@ const Navbar = () => {
           </Link>
         </div>
       </Div8>
+      </div>
     </Div>
   );
 };
