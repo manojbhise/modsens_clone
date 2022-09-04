@@ -2,7 +2,7 @@ It is a Indian e-commerce website.It sells cloths for men, women, boys and girls
 
 # Modesense-clone
 
-Live app link: https://modsens-clone.vercel.app/
+Live app link: https://modsens.vercel.app/
 
 
 ## Snippets :-
